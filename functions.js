@@ -7,8 +7,15 @@
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function checkData(inputString) {
-	// your code goes here
-}
+	// Input: inputString is a string. 
+	// Example: 'string'. 
+	// Output: Return true or false (boolean).
+	if(typeof inputString === 'string') {
+		return inputString.length === 3;
+	} else {
+		throw('Input must be a string.');
+	}
+};
 
 /*
  * PROBLEM `concatenateArrays`: (normal)
@@ -18,8 +25,16 @@ function checkData(inputString) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function concatenateArrays(a, b) {
-	// your code goes here
-}
+	// Input: a and b are arrays of intergers. 
+	// Examples: a = [1,2,3,4], b = [5,6,7,8].
+	// Output: Return an array of integers.
+	if(!Array.isArray(a) || !Array.isArray(b)) {
+		throw new Error('Invalid Input');
+	}
+	if(Array.isArray(a) && Array.isArray(b)) {
+		return a.concat(b)
+	}
+};
 
 /*
  * PROBLEM `fixProperNoun`: (normal)
@@ -31,8 +46,19 @@ function concatenateArrays(a, b) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function fixProperNoun(noun) {
-	// your code goes here
-}
+	// Input: noun is a lowercase string. 
+	// Example: 'london'. 
+	// Output: Return string with capitalized letter.
+	if(typeof noun !== 'string') {
+		throw new Error('Invalid Input');
+	} 
+	else if (noun.charAt(0) === noun.charAt(0).toUpperCase()) {
+		return true;
+	}
+	else {
+		return false;
+	} 
+};
 
 /*
  * PROBLEM `sortLetters`: (normal)
@@ -42,8 +68,18 @@ function fixProperNoun(noun) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function sortLetters(inputString) {
-	// your code goes here
-}
+	// Input: inputString is a string.  
+	// Example: 'schnauzer'
+	// Output: Return a string in alphabetical order. 'schnauzer' -> 'acehnrsuz'
+	if(typeof inputString === 'string') {
+		var arrCharacters = inputString.split('');
+		var alphabetical = arrCharacters.sort();
+		return alphabetical.join('');
+	} 
+	else {
+		throw new Error('Invalid Input');
+	}
+};
 
 /*
  * PROBLEM `absVal`: (normal)
@@ -53,8 +89,11 @@ function sortLetters(inputString) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function absVal(integer) {
+	// Input: integer is a number.
+	// Example: 5
+	// Output: Returns a number.
 	// your code goes here
-}
+};
 
 /*
  * PROBLEM `myMin`: (normal)
@@ -63,6 +102,12 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+ function myMin(num1, num2) {
+ 	// Input: num1 and num2 are numbers.
+ 	// Example: 3, 2
+ 	// Output: Return (smaller) number. 
+ };
 
 /*
  * PROBLEM `myMax`: (normal) - Actual Interview Question
@@ -73,6 +118,12 @@ function absVal(integer) {
  *
  * Insane mode: do this without using a for loop.
  */
+
+ function myMax(arr) {
+ 	// Input: arr is an array of integers.
+ 	// Example: arr = [1, 2, 3, 4]
+ 	// Output: Return (the largest) number.
+ };
 
 /*
  * PROBLEM `getMonth`: (normal)
@@ -86,11 +137,23 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+ function getMonth(number) {
+ 	// Input: number is a number.
+ 	// Example: 4
+ 	// Output: Should return a string value (month).
+ };
+
 /*
  * PROBLEM `randomElement`: (normal)
  * Create a function called `randomElement` that takes an array of values and
  * returns one randomly selected value from that array.
  */
+
+ function randomElement(arr) {
+ 	// Input: arr is an array of values.
+ 	// Example: arr = ['shia labeouf', 2, '19', 7, 'batman']
+ 	// Output: Return a value from array.
+ };
 
 /*
  * PROBLEM `studentPairs`: (normal)
@@ -98,6 +161,12 @@ function absVal(integer) {
  * student names and returns an array of randomly selected pairs of students
  * (array of arrays).
  */
+
+function studentPairs(arr) {
+	// Input: arr is an array of strings.
+	// Example: arr = ['jen', 'maria', 'dana', 'will', 'haythem', 'nate']
+	// Output: Return an array of (pair) arrays.
+};
 
 /*
  * PROBLEM `sumSquares`: (normal)
@@ -107,6 +176,12 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+function sumSquares(N) {
+	// Input: N is a number (positive, non-zero integer).
+	// Example: 8
+	// Output: Return a number (sum of squares of given integers.)
+};
+
 /* 
  * PROBLEM `findMaxDiff`: (normal)
  * Given an array of integers, write a function called `findMaxDiff` that finds
@@ -114,6 +189,12 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+function findMaxDiff(arr) {
+	// Input: arr is an array of integers.
+	// Example: arr = [3, 8, 12, 31, 99]
+	// Output: Return a number (the maximal difference between two adjacent elements)
+};
 
 /*
  * PROBLEM `insertDashes`: (normal)
@@ -123,6 +204,12 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+function insertDashes(inputString) {
+	// Input: inputString is a string (sentence).
+	// Example: inputString = 'This is a short sentence.'
+	// Output: Return a string with dashes between letters. 
+};
 
 /*
  * PROBLEM `mySubstring`: (normal)
@@ -136,6 +223,12 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+function mySubstring(inputString) {
+	// Input: inputString is a string.
+	// Example: inputString = 'This is an example string.'
+	// Output: A substring of the original string. Ex: 'example'
+};
+
 /*
  * PROBLEM `splitSwap`: (hard)
  * Write a function called `splitSwap` that swaps two halves of a given array.
@@ -146,6 +239,12 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+function splitSwap(arr) {
+	// Input: arr is an array.
+	// Example: arr = ['hello', 2, 'how are you?', 9, 'bob']
+	// Output: An array (with halves swapped).
+};
 
 /*
  * PROBLEM `smallMultiples`: (hard)
@@ -158,6 +257,12 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+function smallMultiples(n, k) {
+	// Input: n and k are numbers.
+	// Example: 12, 2
+	// Output: a number (number of multiples of k that are less than n).
+};
+
 /*
  * PROBLEM `rot13`: (hard)
  * Create a function called `rot13` that takes an unencrypted string and returns
@@ -166,6 +271,12 @@ function absVal(integer) {
  * The input should only contain lower-case alphabetic characters. If the input
  * is invalid throw an 'Invalid Input' exception.
  */
+
+function rot13(inputString) {
+	// Input: inputString is a string (with lowercase alphabetic characters).
+	// Example: inputString = 'help me'
+	// Output: A string (in ROT-13 encryption)
+};
 
 /*
  * PROBLEM `derot13`: (hard)
@@ -176,6 +287,12 @@ function absVal(integer) {
  * is invalid throw an 'Invalid Input' exception.
  */
 
+function derot13(rot13String) {
+	// Input: rot13String is a ROT-13 encrypted string in lowercase alphabetic char.
+	// Example: rot13String = ''
+	// Output: An unencrypted string.
+};
+
 /*
  * PROBLEM `rotn`: (hard)
  * Create a function called `rotn` that takes an unencrypted string and an
@@ -184,6 +301,12 @@ function absVal(integer) {
  * The input should only contain lower-case alphabetic characters. If the input
  * is invalid throw an 'Invalid Input' exception.
  */
+
+ function rotn(inputString, n) {
+	// Input: inputString is a string; n is a number.
+	// Example: inputString = 'help me'
+	// Output: A ROT-N encrypted string.
+};
 
 /*
  * PROBLEM `findBoth`: (hard)
@@ -194,6 +317,12 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+ function findBoth(a, b) {
+	// Input: a and b are arrays of integers.
+	// Example: a = [2, 4,, 6, 8]; b = [8, 10, 12, 14]
+	// Output: An array (of elements that are found in both a and b). 
+};
+
 /*
  * PROBLEM `countBoth`: (hard)
  * Write a function called `countBoth` that takes two arrays of integers a and
@@ -202,6 +331,12 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+ function countBoth(a, b) {
+	// Input: a and b are arrays of integers.
+	// Example: a = [1, 3, 5, 7]; b = [3, 5, 7, 9]
+	// Output: A number (count) of elements that appear in both a and b.
+};
 
 /*
  * PROBLEM `isDiagonalMatrix`: (nightmare)
@@ -235,6 +370,16 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+ function isDiagonalMatrix(matrix) {
+	// Input: matrix is an array of arrays of numbers.
+	// Example: 
+		//[ [1, 0, 0]
+		// 	[0, 2, 0]
+		// 	[0, 0, 3]
+		//]
+	// Output: Return true/false (boolean).
+};
+
 /*
  * PROBLEM `isAnagram`: (nightmare) - Actual Interview Question
  * An anagram is a type of word play, the result of rearranging the letters of a
@@ -256,6 +401,12 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+ function isAnagram(arr1, arr2) {
+	// Input: arr1 and arr2 are arrays of strings (of equal length).
+	// Example: arr1 = ['cinema', 'shot', 'aba', 'rain']; arr2 = ['iceman', 'hots', 'bab', 'train']
+	// Output: An array with boolean (true/false) values.
+};
 
 /*
  * PROBLEM `validateParentheses`: (nightmare) - Actual Interview Question
@@ -280,6 +431,12 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+ function validateParentheses(inputString) {
+	// Input: A string of parentheses.
+	// Example: inputString = ')([]{'
+	// Output: Return true/false (a boolean).
+};
+
 /*
  * PROBLEM `flattenArray`: (nightmare) - Actual Interview Question
  * Write a function called flattenArray that takes an array of any type of
@@ -293,6 +450,12 @@ function absVal(integer) {
  *
  * Insane mode: do this without recursion.
  */
+
+ function flattenArray(arr) {
+	// Input: arr is an array (of any type of element).
+	// Example: arr = [1, {a: [2, 3]}, 4, [5, [6]], [[7], 8, 9], 10]
+	// Output: An array of elements (where previous elements that were arrays are non-arrays.)
+};
 
 /*
  * Do not modify the code below
