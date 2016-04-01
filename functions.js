@@ -92,7 +92,17 @@ function absVal(integer) {
 	// Input: integer is a number.
 	// Example: 5
 	// Output: Returns a number.
-	// your code goes here
+	if(typeof integer === 'number') {
+
+		if(integer < 0) {
+			return integer*-1; 
+		} else {
+			return integer;
+		} 
+	}
+	else {
+		throw new Error('Invalid Input');
+	}
 };
 
 /*
@@ -107,6 +117,16 @@ function absVal(integer) {
  	// Input: num1 and num2 are numbers.
  	// Example: 3, 2
  	// Output: Return (smaller) number. 
+ 	if((typeof num1 === 'number') && (typeof num2 === 'number')) {
+ 		if(num1 < num2) {
+ 			return num1;
+ 		} else {
+ 			return num2;
+ 		}
+ 	}
+ 	else {
+		throw new Error('Invalid Input');
+	}
  };
 
 /*
@@ -123,6 +143,20 @@ function absVal(integer) {
  	// Input: arr is an array of integers.
  	// Example: arr = [1, 2, 3, 4]
  	// Output: Return (the largest) number.
+ 	if(Array.isArray(arr)) {
+ 		var largestNumber = arr[0];
+ 		for(var i= 0; i < arr.length; i++) {
+ 			if(typeof arr[i] !== 'number') {
+ 				throw new Error('Invalid Input');
+ 			} else if(largestNumber < arr[i]) {
+ 				largestNumber = arr[i];
+ 			}
+ 		}
+ 	return largestNumber;
+ 	}
+ 	else {
+		throw new Error('Invalid Input');
+	}
  };
 
 /*

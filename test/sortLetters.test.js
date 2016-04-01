@@ -9,9 +9,9 @@ describe('sortLetters', function() {
 		expect(function() {functions.sortLetters([1, 2, 3])}).to.throw('Invalid Input');
 	});
 	it('should return a string if the input is a string', function() {
-		expect(functions.sortLetters('dog').to.be.a('string'));
+		expect(functions.sortLetters('dog')).to.be.a('string');
 	});
 	it('should return the input string in alphabetical order', function() {
-		expect(functions.sortLetters('cat').to.equal('act'));
+		expect(functions.sortLetters('cat')).to.equal('act');
 	});
 });
